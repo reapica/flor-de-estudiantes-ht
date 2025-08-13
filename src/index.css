@@ -1,0 +1,32 @@
+:root{ --bg:#0e0f14; --fg:#f6f6f7; --muted:#a5a7ae; --accent:#9b87f5; --card:#1a1c24; --stroke:#2b2e3a; }
+*{ box-sizing:border-box; }
+html,body,#root{ height:100%; }
+body{ margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial; background:var(--bg); color:var(--fg); }
+
+.navbar{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1rem 1.25rem; border-bottom:1px solid var(--stroke); position:sticky; top:0; background:rgba(14,15,20,.8); backdrop-filter:saturate(1.2) blur(6px); }
+.brand{ font-weight:700; letter-spacing:.3px; }
+nav{ display:flex; gap:.75rem; }
+.link{ color:var(--muted); text-decoration:none; padding:.4rem .7rem; border-radius:.65rem; border:1px solid transparent; }
+.link:hover{ color:var(--fg); border-color:var(--stroke); }
+.link.active{ color:var(--fg); border-color:var(--accent); }
+
+.container{ max-width:1000px; margin:0 auto; padding:1.5rem; }
+.hero{ display:grid; place-items:center; min-height:50vh; text-align:center; gap:1rem; }
+.hero h1{ font-size:clamp(2rem,5vw,3rem); margin:.2rem 0; }
+.hero p{ color:var(--muted); margin:0 0 .5rem; }
+
+.btn{ appearance:none; border:1px solid var(--accent); background:transparent; color:var(--fg); padding:.6rem 1rem; border-radius:.7rem; cursor:not-allowed; }
+.price{ opacity:.9; }
+.grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1rem; }
+.card{ border:1px solid var(--stroke); background:var(--card); border-radius:1rem; overflow:hidden; display:grid; grid-template-rows:auto 1fr; }
+.card-emoji{ display:grid; place-items:center; font-size:3rem; padding:1.25rem; border-bottom:1px solid var(--stroke); }
+.card-body{ padding:1rem; display:grid; align-content:start; gap:.5rem; }
+.card-title{ margin:0; font-size:1.1rem; }
+.card-desc{ margin:0; color:var(--muted); min-height:2.2em; }
+.card-meta{ display:flex; align-items:center; justify-content:space-between; margin-top:.35rem; }
+
+.contact .form, .admin .form{ display:grid; gap:.75rem; max-width:460px; }
+label{ display:grid; gap:.35rem; font-size:.95rem; }
+input,textarea{ background:#0f1117; color:var(--fg); border:1px solid var(--stroke); padding:.6rem .7rem; border-radius:.6rem; }
+.muted{ color:var(--muted); }
+.last-login{ margin-top:1rem; color:var(--muted); font-size:.9rem; }
