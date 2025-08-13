@@ -1,14 +1,20 @@
-import { NavLink } from "react-router-dom";
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
 export default function NavBar() {
   return (
-    <header className="navbar">
-      <div className="brand">Flor de Estudio</div>
-      <nav>
-        <NavLink to="/" end className={({isActive}) => isActive ? "link active" : "link"}>Inicio</NavLink>
-        <NavLink to="/catalogo" className={({isActive}) => isActive ? "link active" : "link"}>Catálogo</NavLink>
-        <NavLink to="/contacto" className={({isActive}) => isActive ? "link active" : "link"}>Contacto</NavLink>
-      </nav>
-    </header>
+    <Navbar bg="light" expand="lg" sticky="top" className="shadow-sm">
+      <Container>
+        <Navbar.Brand as={NavLink} to="/">🌷 Flor de Estudiantes</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link as={NavLink} to="/" end>Inicio</Nav.Link>
+            <Nav.Link as={NavLink} to="/catalogo">Catálogo</Nav.Link>
+            <Nav.Link as={NavLink} to="/contacto">Contacto</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
