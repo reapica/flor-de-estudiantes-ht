@@ -1,7 +1,14 @@
 import { Button } from 'react-bootstrap';
+import { useEffect } from 'react';
 import { LinkContainer } from 'react-router-bootstrap';
 
+
 export default function Home() {
+  
+  useEffect(() => {
+    document.title = 'Flor de Estudiantes';
+  }, []);
+  
   return (
     <section className="text-center py-5">
       <div className="badge bg-light text-muted mb-3">

@@ -1,9 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
+
+
 
 export default function AdminLogin() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  
+    useEffect(() => {
+    document.title = 'Flor de Estudiantes | Panel de Admin';
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();

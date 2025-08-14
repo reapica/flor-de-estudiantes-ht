@@ -1,6 +1,14 @@
+import { useEffect } from 'react';
 import { Form, Button } from 'react-bootstrap';
 
+
+
 export default function Contact() {
+  
+    useEffect(() => {
+    document.title = 'Flor de Estudiantes | Contáctanos';
+  }, []);
+
   return (
     <section className="mx-auto" style={{ maxWidth: 480 }}>
       <h2 className="mb-4">Contacto</h2>
